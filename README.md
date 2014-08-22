@@ -8,8 +8,10 @@ handlebars files that don't end in 'hbs' or 'handlebars' once again the hbsfy pa
 covered if you need that functionality.
 
 To use hbsify either specify use the command 
-```browserify -t hbsify <input files> > <outputfile>
 ```
+browserify -t hbsify <input files> > <outputfile>
+```
+
 or specify it in a gruntfile with <a href="https://github.com/jmreidy/grunt-browserify"grunt-browserify</a>:
 ```javascript
 browserify: {
