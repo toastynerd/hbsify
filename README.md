@@ -1,5 +1,7 @@
 hbsify
 =================
+https://travis-ci.org/toastynerd/hbsify.svg?branch=master
+
 A simple handlebars transfrom for browserify.
 To install run:
 ```
