@@ -5,21 +5,21 @@ var hbsify = function(file) {
   var exts = ['hbs', 'handlebars'];
   var data = '';  
 
-  if (exts.indexOf(file.split('.').pop()) < 0) return through();
-
-  return through(write, end);
-
-  function write(buf) {
+  var write = function(buf) {
     data += buf;
-  } 
+  };
 
-  function end() {
+  var end = function() {
     var precomp = Handlebars.precompile(data);
     var template = 'var Handlebars = require("hbsify").runtime;\n';
     template += 'module.exports = Handlebars.template(' + precomp.toString() + ');\n';
     this.queue(template);
     this.queue(null); 
-  }
+  };
+
+  if (exts.indexOf(file.split('.').pop()) < 0) return through();
+
+  return through(write, end);
 };
 
 module.exports = hbsify;

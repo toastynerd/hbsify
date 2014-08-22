@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     browserify: {
       test: {
         options: {
-          transform: ['./index.js'],
+          transform: ['hbsify'],
           debug: true 
         },
         src: ['test/mocha/**/*.js'],
@@ -29,5 +29,5 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('test', ['jshint', 'browserify:test', 'mocha:test']);
+  grunt.registerTask('test', ['jshint','browserify:test', 'mocha:test']);
 };
