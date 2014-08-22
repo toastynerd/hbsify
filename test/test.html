@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
 </head>
 <body>
   <div id="mocha"></div>
@@ -12,7 +13,7 @@
   </script>
   <script src="testbundle.js"></script>
   <script>
-    if (navigator userAgent.indexOf('PhantomJS') < 0) {
+    if (navigator.userAgent.indexOf('PhantomJS') < 0) {
       mocha.run();
     }
   </script>
