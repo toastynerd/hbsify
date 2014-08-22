@@ -7,7 +7,9 @@ version of handlebars and add your own. Use the above hbsfy if you need that fun
 handlebars files that don't end in 'hbs' or 'handlebars' once again the hbsfy package has you
 covered if you need that functionality.
 
-To use hbsify either specify use the command `browserify -t hbsify <input files> > <outputfile>`
+To use hbsify either specify use the command 
+```browserify -t hbsify <input files> > <outputfile>
+```
 or specify it in a gruntfile with <a href="https://github.com/jmreidy/grunt-browserify"grunt-browserify</a>:
 ```javascript
 browserify: {
