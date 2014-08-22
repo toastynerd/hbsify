@@ -1,6 +1,6 @@
 hbsify
 =================
-https://travis-ci.org/toastynerd/hbsify.svg?branch=master
+<img src="https://travis-ci.org/toastynerd/hbsify.svg?branch=master" alt="Travis CI Badge"></img>
 
 A simple handlebars transfrom for browserify.
 To install run:
