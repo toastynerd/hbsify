@@ -15,7 +15,7 @@ var hbsify = function(file) {
 
   function end() {
     var precomp = Handlebars.precompile(data);
-    var template = 'var Handlebars = require("handlebars/runtime")["default"];\n';
+    var template = 'var Handlebars = require("hbsify").runtime;\n';
     template += 'module.exports = Handlebars.template(' + precomp.toString() + ');\n';
     this.queue(template);
     this.queue(null); 
@@ -23,3 +23,4 @@ var hbsify = function(file) {
 };
 
 module.exports = hbsify;
+module.exports.runtime = require('handlebars/runtime')["default"];

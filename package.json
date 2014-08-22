@@ -1,6 +1,6 @@
 {
   "name": "hbsify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple handlebars template compiler for browserify transforms",
   "main": "index.js",
   "scripts": {
